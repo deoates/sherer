@@ -1,0 +1,87 @@
+@font-face {
+    font-family: 'dosis-semi';
+    src: url('fonts/dosis-semibold-webfont.eot');
+    src: url('fonts/dosis-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/dosis-semibold-webfont.woff2') format('woff2'),
+         url('fonts/dosis-semibold-webfont.woff') format('woff'),
+         url('fonts/dosis-semibold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'dosis-reg';
+    src: url('fonts/dosis-regular-webfont.eot');
+    src: url('fonts/dosis-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/dosis-regular-webfont.woff2') format('woff2'),
+         url('fonts/dosis-regular-webfont.woff') format('woff'),
+         url('fonts/dosis-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'nan';
+    src: url('fonts/nanumpenscript-regular-webfont.eot');
+    src: url('fonts/nanumpenscript-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/nanumpenscript-regular-webfont.woff2') format('woff2'),
+         url('fonts/nanumpenscript-regular-webfont.woff') format('woff'),
+         url('fonts/nanumpenscript-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'whitney';
+    src: url('fonts/whit-webfont.eot');
+    src: url('fonts/whit-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/whit-webfont.woff2') format('woff2'),
+         url('fonts/whit-webfont.woff') format('woff'),
+         url('fonts/whit-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'a-reg-it';
+    src: url('fonts/a-reg-it-webfont.eot');
+    src: url('fonts/a-reg-it-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/a-reg-it-webfont.woff2') format('woff2'),
+         url('fonts/a-reg-it-webfont.woff') format('woff'),
+         url('fonts/a-reg-it-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'a-demi-it';
+    src: url('fonts/a-demi-it-webfont.eot');
+    src: url('fonts/a-demi-it-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/a-demi-it-webfont.woff2') format('woff2'),
+         url('fonts/a-demi-it-webfont.woff') format('woff'),
+         url('fonts/a-demi-it-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'a-demi';
+    src: url('fonts/a-demi-webfont.eot');
+    src: url('fonts/a-demi-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/a-demi-webfont.woff2') format('woff2'),
+         url('fonts/a-demi-webfont.woff') format('woff'),
+         url('fonts/a-demi-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'a';
+    src: url('fonts/a-reg-webfont.eot');
+    src: url('fonts/a-reg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/a-reg-webfont.woff2') format('woff2'),
+         url('fonts/a-reg-webfont.woff') format('woff'),
+         url('fonts/a-reg-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

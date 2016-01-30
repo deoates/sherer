@@ -1,0 +1,494 @@
+/*!
+ * Theme Name: John Sherer's custom theme
+ * Author: David Oates
+ * Author URI: http://oat.es
+ * Description: Custom layout
+ */
+
+@import compass
+@import normalize
+@import fonts.css
+
+@mixin placeholder($col)
+  ::-webkit-input-placeholder 
+    color: $col
+  :-moz-placeholder
+    color: $col
+  ::-moz-placeholder
+    color: $col
+  :-ms-input-placeholder
+    color: $col
+
+html, body
+  -webkit-font-smoothing: antialiased
+
+*
+  box-sizing: border-box
+
+$green: #78C225
+$blue: #10637A
+
+
+a
+  text-decoration: none
+
+  img.button
+    @include transform(scale(1))
+    @include transition(all .1s)
+    &:hover
+      @include transform(scale(1.1))
+      
+
+h1, h2, h3, h4, h5, h6, p
+  font-weight: normal
+  color: #2A3436
+
+p
+  font-family: 'a'
+
+  em
+    font-family: 'a-reg-it'
+    font-style: normal
+
+  strong
+    font-family: 'a-demi'
+    font-style: normal
+    
+  em strong, strong em
+    font-family: 'a-demi-it'
+
+body
+  background: url('img/curved-bg.svg')
+  background-size: 2105px 179px
+  background-position: top center
+  background-repeat: no-repeat
+
+section#branding
+  text-align: center
+  padding-top: 12px
+
+  img.logo
+    position: relative
+    left: 55px
+
+nav
+  text-align: center
+
+  ul
+    margin: 0
+    padding: 0
+
+  ul li
+    list-style: none
+    display: inline-block
+
+  ul li a
+    font-family: 'nan'
+    padding: 0px 8px
+    color: #828976
+    text-decoration: none
+    font-size: 1.2rem
+
+    &:before, &:after
+      content: ''
+      width: 11px
+      height: 24px
+      display: inline-block
+      position: relative
+      top: 6px
+      visibility: hidden
+
+    &:before
+      background: url('img/left-bracket.svg') 
+      background-size: 100% 100%
+
+    &:after
+      background: url('img/right-bracket.svg') 
+      background-size: 100% 100%
+
+    &:hover
+      color: $green
+      
+      &:before, &:after
+        visibility: visible
+
+
+
+
+.cta-section
+  @include pie-clearfix
+  text-align: center    
+
+  h1
+    font-family: 'whitney', Helvetica, Arial, sans-serif
+    font-weight: normal
+    letter-spacing: -.06rem
+    font-size: 3.7rem
+    color: $blue
+    text-transform: none
+
+  span.stars
+    display: inline-block
+    padding: 0 2%
+    position: relative
+
+    &:before
+      content: ''
+      width: 94%
+      height: 100px
+      background: url('img/stars.svg') no-repeat
+      background-size: 100% auto
+      display: block
+      position: absolute
+      z-index: -1
+      top: -5%
+      left: 4%
+
+  .entry-content
+    margin: auto auto
+    max-width: 730px
+    width: 100%
+    text-align: left
+
+    .headshot-container
+      text-align: center
+      float: left
+      margin-right: 45px
+      height: 260px
+
+      .headshot
+        margin-bottom: 15px
+
+    p
+      font-family: 'a-demi'
+      color: #2A3436
+
+  .form-container
+    max-width: 430px
+    width: 100%
+    margin: 60px auto 0
+    position: relative
+
+    &:after
+      content: ''
+      width: 85px
+      height: 100px
+      background: url('img/sub-arrow.svg') no-repeat
+      background-size: 100% auto
+      display: block
+      position: absolute
+      top: 40%
+      right: -100px
+
+  form
+    width: 100%
+    @include pie-clearfix
+    position: relative
+    @include placeholder(#6C5844)
+
+    input
+      font-family: 'a-demi'
+      height: 46px
+      padding: 0 14px
+      &:focus
+        outline: 0px
+
+    input[type="email"]
+      background: #FFEA8A
+      color: #6C5844
+      border: 0px
+      width: 100%
+
+    input[type="submit"]
+      border: 0px 
+      background: #F98C1D
+      color: #fff
+      position: absolute
+      right: 0
+      top: 0
+
+
+section
+  header
+    text-align: center
+
+    img.divider
+      margin: 20px 0 -10px
+
+    h1
+      text-transform: uppercase
+      font-family: 'dosis-reg'
+      font-size: 2.2rem
+      letter-spacing: .6rem
+      color: $blue
+
+    h2
+      font-size: 1.6rem
+      font-family: 'nan'
+      color: $green
+      margin-top: -10px
+
+section.kindwords
+  margin: 60px 0
+  padding: 40px 0 30px
+  text-align: center
+  background: url('img/lines-bg.png') no-repeat
+  background-size: 1740px auto
+  background-position: bottom center
+
+
+  .accolades-container
+    @include pie-clearfix
+    width: 100%
+    margin-top: 50px
+
+  ul.accolades
+    margin: 0
+    padding: 0
+
+    li  
+      list-style: none
+      width: 33%
+      display: inline-block
+      padding: 0 4%
+      text-align: left
+
+    img
+      float: left
+
+    p 
+      margin-left: 80px
+      margin-top: 0
+      font-size: .9rem
+    
+
+
+section.popular
+  margin: 0 0 60px
+
+.collection-container
+  margin-top: 40px
+  width: 100%
+  @include pie-clearfix
+
+  .collection
+    width: 33%
+    display: inline-block
+    background: #FAFCFC
+    padding: 20px 0 30px
+    margin: 0 10px
+
+    h1
+      font-size: .95rem
+      font-family: 'dosis-semi'
+      color: #7B8B8B
+      letter-spacing: .4rem
+
+    ul.post-listing
+      padding: 0
+      text-align: left
+      margin-top: 15px
+
+      li
+        list-style: none
+
+        a
+          @include transition(all .1s)
+          display: block
+          padding: 5px 12.5%
+          width: 100%
+
+          &:hover
+            background: #E2FFC1
+            h1
+              color: darken($green, 15%)
+            
+
+        h1
+          @include transition(font-size .1s)
+          font-family: 'whitney', Helvetica, Arial, sans-serif
+          font-weight: normal
+          letter-spacing: -.04rem
+          font-size: 1.3rem
+          color: $blue
+          text-transform: none
+
+        p
+          font-size: .85rem
+          color: #3E4B55
+          line-height: 1.3
+
+body.home article
+  max-width: 800px
+  width: 100%
+  margin: auto auto
+  margin-top: 45px
+        
+
+article
+  text-align: left
+
+  .separator
+    width: 100%
+    text-align: center
+    margin: 50px 0
+
+  &:first-child
+    .separator
+      display: none
+
+  header
+    margin-bottom: 40px
+
+  h1.entry-title
+    text-align: left
+    margin-top: 0px
+
+  h1.entry-title a
+    @include transition(font-size .1s)
+    font-family: 'whitney', Helvetica, Arial, sans-serif
+    font-weight: normal
+    letter-spacing: -.06rem
+    font-size: 3.5rem
+    color: $blue
+    text-transform: none
+
+    &:hover
+      color: darken($green, 10%)
+
+
+  .entry-meta
+    text-align: left
+
+    span.entry-date, span.author
+      color: #8D999F
+      font-family: 'dosis-semi'
+      text-transform: uppercase
+      letter-spacing: 0.2rem
+      font-size: .9rem
+
+      a
+        color: #8D999F
+
+    span.author, span.author a
+      color: #58636C
+
+
+    ul.social-buttons
+      display: inline-block
+      padding: 0
+      position: relative
+      top: 3px
+      margin-left: 20px
+
+      li
+        list-style: none
+        display: inline-block
+
+        a
+          padding: 0px 12px
+
+section.entry-content 
+  img.featured-image
+    max-width: 350px!important
+    height: auto
+    float: right
+    margin: 0px 0 30px 30px
+
+  p
+    padding-right: 22.5%
+
+  a.more-link
+    display: block
+    margin-top: 35px
+
+
+body:not(.home)
+
+  section#branding img.logo
+    left: -90px
+
+  section#content, section#branding, header#header, nav#menu
+    text-align: left
+
+  header#header, section#content
+    margin-left: 350px
+
+  nav#menu
+    margin: 15px 0 25px
+    position: relative
+    left: -17px
+
+  section#content
+    max-width: 800px
+    width: 100%
+
+
+footer
+  height: 100px
+  width: 100%
+  background: url('img/footer.svg')
+  background-size: 2105px 179px
+  background-position: top center
+  background-repeat: no-repeat
+  text-align: center
+  padding-top: 60px
+  font-family: 'nan'
+  font-size: 1.2rem
+
+  a
+    color: $green
+
+aside#sidebar
+  float: left
+  width: 270px
+  padding-left: 25px
+  margin-top: 80px
+
+  ul
+    padding: 0
+
+  ul.xoxo > li
+    list-style: none
+
+  h3.widget-title
+    color: $blue
+    font-family: 'dosis-semi'
+    text-transform: uppercase
+    letter-spacing: 0.2rem
+
+  p
+    font-size: .85rem
+    color: #5D6A75
+
+  img.sidebar-headshot
+    margin-left: -7px
+
+  form
+    width: 90%
+    @include pie-clearfix
+    position: relative
+    @include placeholder(#6C5844)
+
+    input
+      font-family: 'a-demi'
+      font-size: .8rem
+      height: 30px
+      padding: 0 7px
+      &:focus
+        outline: 0px
+
+    input[type="email"]
+      background: #FFEA8A
+      color: #6C5844
+      border: 0px
+      width: 100%
+
+    input[type="submit"]
+      border: 0px 
+      background: #F98C1D
+      color: #fff
+      position: absolute
+      right: 0
+      top: 0
+
