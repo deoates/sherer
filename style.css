@@ -1,73 +1,907 @@
-/*
-Error: Undefined variable: "$green".
-        on line 24 of /Users/david/dev/sherer/wp-content/themes/sherer/style.sass
+/*!
+ * Theme Name: John Sherer's custom theme
+ * Author: David Oates
+ * Author URI: http://oat.es
+ * Description: Custom layout
+ */
+/*! normalize.css v3.0.0 | MIT License | git.io/normalize */
+/*! normalize.css v3.0.0 | HTML5 Display Definitions | MIT License | git.io/normalize */
+@import url(fonts.css);
+/* line 9, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-normalize-1.5/stylesheets/normalize/_html5.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
 
-19:   :-ms-input-placeholder
-20:     color: $col
-21: 
-22: html, body
-23:   -webkit-font-smoothing: antialiased
-24:   background: $green
-25: 
-26: *
-27:   box-sizing: border-box
-28: 
-29: $green: #78C225
+/* line 29, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-normalize-1.5/stylesheets/normalize/_html5.scss */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
 
-Backtrace:
-/Users/david/dev/sherer/wp-content/themes/sherer/style.sass:24
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/script/tree/variable.rb:49:in `_perform'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/script/tree/node.rb:50:in `perform'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:384:in `visit_prop'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/stack.rb:115:in `with_frame'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:420:in `block (2 levels) in visit_rule'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:420:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:420:in `block in visit_rule'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:418:in `visit_rule'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/stack.rb:115:in `with_frame'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:52:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:157:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:8:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/root_node.rb:20:in `render'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/engine.rb:268:in `render'
-/Library/Ruby/Gems/2.0.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:17:in `block in render'
-/Library/Ruby/Gems/2.0.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:29:in `with_import_scope'
-/Library/Ruby/Gems/2.0.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:16:in `render'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/plugin/compiler.rb:491:in `update_stylesheet'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/plugin/compiler.rb:209:in `each'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/plugin/compiler.rb:469:in `on_file_changed'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/plugin/compiler.rb:328:in `block in watch'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/vendor/listen/lib/listen/listener.rb:252:in `call'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/vendor/listen/lib/listen/listener.rb:252:in `on_change'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/vendor/listen/lib/listen/adapter.rb:254:in `call'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/vendor/listen/lib/listen/adapter.rb:254:in `report_changes'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/vendor/listen/lib/listen/adapter.rb:323:in `poll_changed_directories'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Undefined variable: \"$green\".\A         on line 24 of /Users/david/dev/sherer/wp-content/themes/sherer/style.sass\A \A 19:   :-ms-input-placeholder\A 20:     color: $col\A 21: \A 22: html, body\A 23:   -webkit-font-smoothing: antialiased\A 24:   background: $green\A 25: \A 26: *\A 27:   box-sizing: border-box\A 28: \A 29: $green: #78C225"; }
+/* line 40, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-normalize-1.5/stylesheets/normalize/_html5.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* line 47, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-normalize-1.5/stylesheets/normalize/_html5.scss */
+[hidden],
+template {
+  display: none;
+}
+
+/*! normalize.css v3.0.0 | Base | MIT License | git.io/normalize */
+/* line 11, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-normalize-1.5/stylesheets/normalize/_base.scss */
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* line 19, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-normalize-1.5/stylesheets/normalize/_base.scss */
+body {
+  margin: 0;
+}
+
+/*! normalize.css v3.0.0 | Links | MIT License | git.io/normalize */
+/* line 9, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-normalize-1.5/stylesheets/normalize/_links.scss */
+a {
+  background: transparent;
+}
+
+/* line 15, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-normalize-1.5/stylesheets/normalize/_links.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/*! normalize.css v3.0.0 | Typography | MIT License | git.io/normalize */
+/* line 9, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-normalize-1.5/stylesheets/normalize/_typography.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/* line 15, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-normalize-1.5/stylesheets/normalize/_typography.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/* line 22, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-normalize-1.5/stylesheets/normalize/_typography.scss */
+dfn {
+  font-style: italic;
+}
+
+/* line 29, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-normalize-1.5/stylesheets/normalize/_typography.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* line 36, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-normalize-1.5/stylesheets/normalize/_typography.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/* line 43, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-normalize-1.5/stylesheets/normalize/_typography.scss */
+small {
+  font-size: 80%;
+}
+
+/* line 49, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-normalize-1.5/stylesheets/normalize/_typography.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 57, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-normalize-1.5/stylesheets/normalize/_typography.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 61, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-normalize-1.5/stylesheets/normalize/_typography.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/*! normalize.css v3.0.0 | Embedded Content | MIT License | git.io/normalize */
+/* line 9, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-normalize-1.5/stylesheets/normalize/_embeds.scss */
+img {
+  border: 0;
+}
+
+/* line 15, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-normalize-1.5/stylesheets/normalize/_embeds.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/*! normalize.css v3.0.0 | Figures | MIT License | git.io/normalize */
+/* line 9, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-normalize-1.5/stylesheets/normalize/_groups.scss */
+figure {
+  margin: 1em 40px;
+}
+
+/* line 15, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-normalize-1.5/stylesheets/normalize/_groups.scss */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/* line 23, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-normalize-1.5/stylesheets/normalize/_groups.scss */
+pre {
+  overflow: auto;
+}
+
+/* line 29, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-normalize-1.5/stylesheets/normalize/_groups.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/*! normalize.css v3.0.0 | Forms | MIT License | git.io/normalize */
+/* line 15, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-normalize-1.5/stylesheets/normalize/_forms.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+/* line 27, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-normalize-1.5/stylesheets/normalize/_forms.scss */
+button {
+  overflow: visible;
+}
+
+/* line 36, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-normalize-1.5/stylesheets/normalize/_forms.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/* line 47, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-normalize-1.5/stylesheets/normalize/_forms.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+/* line 57, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-normalize-1.5/stylesheets/normalize/_forms.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/* line 64, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-normalize-1.5/stylesheets/normalize/_forms.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 73, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-normalize-1.5/stylesheets/normalize/_forms.scss */
+input {
+  line-height: normal;
+}
+
+/* line 83, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-normalize-1.5/stylesheets/normalize/_forms.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* line 93, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-normalize-1.5/stylesheets/normalize/_forms.scss */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/* line 102, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-normalize-1.5/stylesheets/normalize/_forms.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* line 113, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-normalize-1.5/stylesheets/normalize/_forms.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 120, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-normalize-1.5/stylesheets/normalize/_forms.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/* line 129, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-normalize-1.5/stylesheets/normalize/_forms.scss */
+legend {
+  border: 0;
+  padding: 0;
+}
+
+/* line 136, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-normalize-1.5/stylesheets/normalize/_forms.scss */
+textarea {
+  overflow: auto;
+}
+
+/* line 143, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-normalize-1.5/stylesheets/normalize/_forms.scss */
+optgroup {
+  font-weight: bold;
+}
+
+/*! normalize.css v3.0.0 | Tables | MIT License | git.io/normalize */
+/* line 9, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-normalize-1.5/stylesheets/normalize/_tables.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 14, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-normalize-1.5/stylesheets/normalize/_tables.scss */
+td,
+th {
+  padding: 0;
+}
+
+/* line 22, style.sass */
+html, body {
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 25, style.sass */
+* {
+  box-sizing: border-box;
+}
+
+/* line 32, style.sass */
+a {
+  text-decoration: none;
+}
+/* line 35, style.sass */
+a img.button {
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -moz-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+/* line 38, style.sass */
+a img.button:hover {
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+/* line 42, style.sass */
+h1, h2, h3, h4, h5, h6, p {
+  font-weight: normal;
+  color: #2A3436;
+}
+
+/* line 46, style.sass */
+p {
+  font-family: "a";
+}
+/* line 49, style.sass */
+p em {
+  font-family: "a-reg-it";
+  font-style: normal;
+}
+/* line 53, style.sass */
+p strong {
+  font-family: "a-demi";
+  font-style: normal;
+}
+/* line 57, style.sass */
+p em strong, p strong em {
+  font-family: "a-demi-it";
+}
+
+/* line 60, style.sass */
+body {
+  background: url("img/curved-bg.svg");
+  background-size: 2105px 179px;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+/* line 66, style.sass */
+section#branding {
+  text-align: center;
+  padding-top: 12px;
+}
+/* line 70, style.sass */
+section#branding img.logo {
+  position: relative;
+  left: 55px;
+}
+
+/* line 74, style.sass */
+nav {
+  text-align: center;
+}
+/* line 77, style.sass */
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 81, style.sass */
+nav ul li {
+  list-style: none;
+  display: inline-block;
+}
+/* line 85, style.sass */
+nav ul li a {
+  font-family: "nan";
+  padding: 0px 8px;
+  color: #828976;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+/* line 92, style.sass */
+nav ul li a:before, nav ul li a:after {
+  content: "";
+  width: 11px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+  top: 6px;
+  visibility: hidden;
+}
+/* line 101, style.sass */
+nav ul li a:before {
+  background: url("img/left-bracket.svg");
+  background-size: 100% 100%;
+}
+/* line 105, style.sass */
+nav ul li a:after {
+  background: url("img/right-bracket.svg");
+  background-size: 100% 100%;
+}
+/* line 109, style.sass */
+nav ul li a:hover {
+  color: #78C225;
+}
+/* line 112, style.sass */
+nav ul li a:hover:before, nav ul li a:hover:after {
+  visibility: visible;
+}
+
+/* line 118, style.sass */
+.cta-section {
+  *zoom: 1;
+  text-align: center;
+}
+/* line 38, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/general/_clearfix.scss */
+.cta-section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 122, style.sass */
+.cta-section h1 {
+  font-family: "whitney", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  letter-spacing: -0.06rem;
+  font-size: 3.7rem;
+  color: #10637A;
+  text-transform: none;
+}
+/* line 130, style.sass */
+.cta-section span.stars {
+  display: inline-block;
+  padding: 0 2%;
+  position: relative;
+}
+/* line 135, style.sass */
+.cta-section span.stars:before {
+  content: "";
+  width: 94%;
+  height: 100px;
+  background: url("img/stars.svg") no-repeat;
+  background-size: 100% auto;
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: -5%;
+  left: 4%;
+}
+/* line 147, style.sass */
+.cta-section .entry-content {
+  margin: auto auto;
+  max-width: 730px;
+  width: 100%;
+  text-align: left;
+}
+/* line 153, style.sass */
+.cta-section .entry-content .headshot-container {
+  text-align: center;
+  float: left;
+  margin-right: 45px;
+  height: 260px;
+}
+/* line 159, style.sass */
+.cta-section .entry-content .headshot-container .headshot {
+  margin-bottom: 15px;
+}
+/* line 162, style.sass */
+.cta-section .entry-content p {
+  font-family: "a-demi";
+  color: #2A3436;
+}
+/* line 166, style.sass */
+.cta-section .form-container {
+  max-width: 430px;
+  width: 100%;
+  margin: 60px auto 0;
+  position: relative;
+}
+/* line 172, style.sass */
+.cta-section .form-container:after {
+  content: "";
+  width: 85px;
+  height: 100px;
+  background: url("img/sub-arrow.svg") no-repeat;
+  background-size: 100% auto;
+  display: block;
+  position: absolute;
+  top: 40%;
+  right: -100px;
+}
+/* line 183, style.sass */
+.cta-section form {
+  width: 100%;
+  *zoom: 1;
+  position: relative;
+  -moz-placeholder-color: #6C5844;
+  -ms-input-placeholder-color: #6C5844;
+}
+/* line 38, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/general/_clearfix.scss */
+.cta-section form:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 13, style.sass */
+.cta-section form ::-webkit-input-placeholder {
+  color: #6C5844;
+}
+/* line 17, style.sass */
+.cta-section form ::-moz-placeholder {
+  color: #6C5844;
+}
+/* line 189, style.sass */
+.cta-section form input {
+  font-family: "a-demi";
+  height: 46px;
+  padding: 0 14px;
+}
+/* line 193, style.sass */
+.cta-section form input:focus {
+  outline: 0px;
+}
+/* line 196, style.sass */
+.cta-section form input[type="email"] {
+  background: #FFEA8A;
+  color: #6C5844;
+  border: 0px;
+  width: 100%;
+}
+/* line 202, style.sass */
+.cta-section form input[type="submit"] {
+  border: 0px;
+  background: #F98C1D;
+  color: #fff;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* line 212, style.sass */
+section header {
+  text-align: center;
+}
+/* line 215, style.sass */
+section header img.divider {
+  margin: 20px 0 -10px;
+}
+/* line 218, style.sass */
+section header h1 {
+  text-transform: uppercase;
+  font-family: "dosis-reg";
+  font-size: 2.2rem;
+  letter-spacing: 0.6rem;
+  color: #10637A;
+}
+/* line 225, style.sass */
+section header h2 {
+  font-size: 1.6rem;
+  font-family: "nan";
+  color: #78C225;
+  margin-top: -10px;
+}
+
+/* line 231, style.sass */
+section.kindwords {
+  margin: 60px 0;
+  padding: 40px 0 30px;
+  text-align: center;
+  background: url("img/lines-bg.png") no-repeat;
+  background-size: 1740px auto;
+  background-position: bottom center;
+}
+/* line 240, style.sass */
+section.kindwords .accolades-container {
+  *zoom: 1;
+  width: 100%;
+  margin-top: 50px;
+}
+/* line 38, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/general/_clearfix.scss */
+section.kindwords .accolades-container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 245, style.sass */
+section.kindwords ul.accolades {
+  margin: 0;
+  padding: 0;
+}
+/* line 249, style.sass */
+section.kindwords ul.accolades li {
+  list-style: none;
+  width: 33%;
+  display: inline-block;
+  padding: 0 4%;
+  text-align: left;
+}
+/* line 256, style.sass */
+section.kindwords ul.accolades img {
+  float: left;
+}
+/* line 259, style.sass */
+section.kindwords ul.accolades p {
+  margin-left: 80px;
+  margin-top: 0;
+  font-size: 0.9rem;
+}
+
+/* line 266, style.sass */
+section.popular {
+  margin: 0 0 60px;
+}
+
+/* line 269, style.sass */
+.collection-container {
+  margin-top: 40px;
+  width: 100%;
+  *zoom: 1;
+}
+/* line 38, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/general/_clearfix.scss */
+.collection-container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 274, style.sass */
+.collection-container .collection {
+  width: 33%;
+  display: inline-block;
+  background: #FAFCFC;
+  padding: 20px 0 30px;
+  margin: 0 10px;
+}
+/* line 281, style.sass */
+.collection-container .collection h1 {
+  font-size: 0.95rem;
+  font-family: "dosis-semi";
+  color: #7B8B8B;
+  letter-spacing: 0.4rem;
+}
+/* line 287, style.sass */
+.collection-container .collection ul.post-listing {
+  padding: 0;
+  text-align: left;
+  margin-top: 15px;
+}
+/* line 292, style.sass */
+.collection-container .collection ul.post-listing li {
+  list-style: none;
+}
+/* line 295, style.sass */
+.collection-container .collection ul.post-listing li a {
+  -moz-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+  display: block;
+  padding: 5px 12.5%;
+  width: 100%;
+}
+/* line 301, style.sass */
+.collection-container .collection ul.post-listing li a:hover {
+  background: #E2FFC1;
+}
+/* line 303, style.sass */
+.collection-container .collection ul.post-listing li a:hover h1 {
+  color: #508219;
+}
+/* line 307, style.sass */
+.collection-container .collection ul.post-listing li h1 {
+  -moz-transition: font-size 0.1s;
+  -o-transition: font-size 0.1s;
+  -webkit-transition: font-size 0.1s;
+  transition: font-size 0.1s;
+  font-family: "whitney", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  letter-spacing: -0.04rem;
+  font-size: 1.3rem;
+  color: #10637A;
+  text-transform: none;
+}
+/* line 316, style.sass */
+.collection-container .collection ul.post-listing li p {
+  font-size: 0.85rem;
+  color: #3E4B55;
+  line-height: 1.3;
+}
+
+/* line 321, style.sass */
+body.home article {
+  max-width: 800px;
+  width: 100%;
+  margin: auto auto;
+  margin-top: 45px;
+}
+
+/* line 328, style.sass */
+article {
+  text-align: left;
+}
+/* line 331, style.sass */
+article .separator {
+  width: 100%;
+  text-align: center;
+  margin: 50px 0;
+}
+/* line 337, style.sass */
+article:first-child .separator {
+  display: none;
+}
+/* line 340, style.sass */
+article header {
+  margin-bottom: 40px;
+}
+/* line 343, style.sass */
+article h1.entry-title {
+  text-align: left;
+  margin-top: 0px;
+}
+/* line 347, style.sass */
+article h1.entry-title a {
+  -moz-transition: font-size 0.1s;
+  -o-transition: font-size 0.1s;
+  -webkit-transition: font-size 0.1s;
+  transition: font-size 0.1s;
+  font-family: "whitney", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  letter-spacing: -0.06rem;
+  font-size: 3.5rem;
+  color: #10637A;
+  text-transform: none;
+}
+/* line 356, style.sass */
+article h1.entry-title a:hover {
+  color: #5e971d;
+}
+/* line 360, style.sass */
+article .entry-meta {
+  text-align: left;
+}
+/* line 363, style.sass */
+article .entry-meta span.entry-date, article .entry-meta span.author {
+  color: #8D999F;
+  font-family: "dosis-semi";
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 0.9rem;
+}
+/* line 370, style.sass */
+article .entry-meta span.entry-date a, article .entry-meta span.author a {
+  color: #8D999F;
+}
+/* line 373, style.sass */
+article .entry-meta span.author, article .entry-meta span.author a {
+  color: #58636C;
+}
+/* line 377, style.sass */
+article .entry-meta ul.social-buttons {
+  display: inline-block;
+  padding: 0;
+  position: relative;
+  top: 3px;
+  margin-left: 20px;
+}
+/* line 384, style.sass */
+article .entry-meta ul.social-buttons li {
+  list-style: none;
+  display: inline-block;
+}
+/* line 388, style.sass */
+article .entry-meta ul.social-buttons li a {
+  padding: 0px 12px;
+}
+
+/* line 392, style.sass */
+section.entry-content img.featured-image {
+  max-width: 350px !important;
+  height: auto;
+  float: right;
+  margin: 0px 0 30px 30px;
+}
+/* line 398, style.sass */
+section.entry-content p {
+  padding-right: 22.5%;
+}
+/* line 401, style.sass */
+section.entry-content a.more-link {
+  display: block;
+  margin-top: 35px;
+}
+
+/* line 408, style.sass */
+body:not(.home) section#branding img.logo {
+  left: -90px;
+}
+/* line 411, style.sass */
+body:not(.home) section#content, body:not(.home) section#branding, body:not(.home) header#header, body:not(.home) nav#menu {
+  text-align: left;
+}
+/* line 414, style.sass */
+body:not(.home) header#header, body:not(.home) section#content {
+  margin-left: 350px;
+}
+/* line 417, style.sass */
+body:not(.home) nav#menu {
+  margin: 15px 0 25px;
+  position: relative;
+  left: -17px;
+}
+/* line 422, style.sass */
+body:not(.home) section#content {
+  max-width: 800px;
+  width: 100%;
+}
+
+/* line 427, style.sass */
+footer {
+  height: 100px;
+  width: 100%;
+  background: url("img/footer.svg");
+  background-size: 2105px 179px;
+  background-position: top center;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding-top: 60px;
+  font-family: "nan";
+  font-size: 1.2rem;
+}
+/* line 439, style.sass */
+footer a {
+  color: #78C225;
+}
+
+/* line 442, style.sass */
+aside#sidebar {
+  float: left;
+  width: 270px;
+  padding-left: 25px;
+  margin-top: 80px;
+}
+/* line 448, style.sass */
+aside#sidebar ul {
+  padding: 0;
+}
+/* line 451, style.sass */
+aside#sidebar ul.xoxo > li {
+  list-style: none;
+}
+/* line 454, style.sass */
+aside#sidebar h3.widget-title {
+  color: #10637A;
+  font-family: "dosis-semi";
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+/* line 460, style.sass */
+aside#sidebar p {
+  font-size: 0.85rem;
+  color: #5D6A75;
+}
+/* line 464, style.sass */
+aside#sidebar img.sidebar-headshot {
+  margin-left: -7px;
+}
+/* line 467, style.sass */
+aside#sidebar form {
+  width: 90%;
+  *zoom: 1;
+  position: relative;
+  -moz-placeholder-color: #6C5844;
+  -ms-input-placeholder-color: #6C5844;
+}
+/* line 38, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/general/_clearfix.scss */
+aside#sidebar form:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 13, style.sass */
+aside#sidebar form ::-webkit-input-placeholder {
+  color: #6C5844;
+}
+/* line 17, style.sass */
+aside#sidebar form ::-moz-placeholder {
+  color: #6C5844;
+}
+/* line 473, style.sass */
+aside#sidebar form input {
+  font-family: "a-demi";
+  font-size: 0.8rem;
+  height: 30px;
+  padding: 0 7px;
+}
+/* line 478, style.sass */
+aside#sidebar form input:focus {
+  outline: 0px;
+}
+/* line 481, style.sass */
+aside#sidebar form input[type="email"] {
+  background: #FFEA8A;
+  color: #6C5844;
+  border: 0px;
+  width: 100%;
+}
+/* line 487, style.sass */
+aside#sidebar form input[type="submit"] {
+  border: 0px;
+  background: #F98C1D;
+  color: #fff;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
