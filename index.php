@@ -2,16 +2,16 @@
 <section id="content" role="main">
 <?php if ( is_front_page() || is_home() || is_front_page() && is_home() ) { ?>
 
-  <div class="cta-section">
+  <section class="cta-section">
     <header>
       <h1>Growing a sales org from<br> nothing to <span class="stars">ten mill</span> ARR</h1>
     </header>
     <div class="entry-content">
       <div class="headshot-container">
-        <img class="headshot" src="<?php bloginfo('template_directory') ?>/img/headshot-fancy.jpg" alt="John Sherer" width="144" height="auto">
+        <img class="headshot" src="<?php bloginfo('template_directory') ?>/img/headshot-fancy.jpg" alt="John Sherer">
         <br>
         <a target="blank" href="https://www.linkedin.com/in/johnsherer">
-          <img src="<?php bloginfo('template_directory') ?>/img/li-connect.svg" alt="Connect with John Sherer on Linkedin" width="122" height="29">
+          <img class="button" src="<?php bloginfo('template_directory') ?>/img/li-connect.svg" alt="Connect with John Sherer on Linkedin" width="122" height="29">
         </a>
       </div><!-- headshot -->
       <p>
@@ -34,7 +34,7 @@
         <input type="submit" value="Subscribe">
       </form>
     </div>
-  </div><!-- cta-section -->
+  </section><!-- cta-section -->
 
   <section class="kindwords">
     <header>
@@ -85,7 +85,7 @@
         
     </div>
   </section>
-  <section class="popular"><!-- most popular posts -->
+  <section id="most-popular" class="popular"><!-- most popular posts -->
     <header>
       <img class="divider" src="<?php bloginfo('template_directory') ?>/img/divider.svg" alt="" width="81" height="29">
       <h1> Writing On Sales </h1>
@@ -109,7 +109,7 @@
           <?php wp_reset_query(); ?>
         </ul>
         <a href="/category/inbound-sales">
-          <img class="button" src="<?php bloginfo('template_directory') ?>/img/see-all-button.svg" alt="" width="159" height="auto">
+          <img class="button" src="<?php bloginfo('template_directory') ?>/img/see-all-button.svg" alt=""  height="auto">
         </a>
       </div>
       <div class="collection">
@@ -129,20 +129,45 @@
           <?php wp_reset_query(); ?>
         </ul>
         <a href="/category/inbound-sales">
-        <img class="button" src="<?php bloginfo('template_directory') ?>/img/see-all-button.svg" alt="" width="159" height="auto">
+          <img class="button" src="<?php bloginfo('template_directory') ?>/img/see-all-button.svg" alt=""  height="auto">
+        </a>
+      </div>
+      <div class="collection">
+        <a href="/category/inbound-sales">
+          <h1>Inbound Sales</h1>
+        </a>
+        <ul class="post-listing">
+          <?php query_posts('cat=3'); ?>
+            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+              <li>
+                <a href="<?php the_permalink(); ?>">
+                  <h1><?php the_title(); ?></h1>
+                  <p><?php the_excerpt(); ?></p>
+                </a>
+              </li>
+          <?php endwhile; endif; ?>
+          <?php wp_reset_query(); ?>
+        </ul>
+        <a href="/category/inbound-sales">
+        <img class="button" src="<?php bloginfo('template_directory') ?>/img/see-all-button.svg" alt=""  height="auto">
         </a>
       </div>
   </section><!-- most popular posts -->
-  <section><!-- most recent posts -->
+  <section id="most-recent" class="most-recent"><!-- most recent posts -->
     <header>
       <img class="divider" src="<?php bloginfo('template_directory') ?>/img/divider.svg" alt="" width="81" height="29">
       <h1> Most Recent Posts </h1>
     <header>
+      <?php query_posts('showposts=3'); ?>
       <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
       <?php get_template_part( 'entry' ); ?>
       <?php comments_template(); ?>
       <?php endwhile; endif; ?>
-      <?php get_template_part( 'nav', 'below' ); ?>
+      <?php wp_reset_query(); ?>
+      <br><br>
+      <a href="/posts">
+        <img class="button" src="<?php bloginfo('template_directory') ?>/img/see-all-button.svg" alt=""  height="auto">
+      </a>
   </section><!-- most recent -->
 <?php } ?>
 

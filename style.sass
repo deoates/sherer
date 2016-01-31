@@ -63,6 +63,10 @@ body
   background-position: top center
   background-repeat: no-repeat
 
+body.home
+  header#header
+    padding: 0 25px
+
 section#branding
   text-align: center
   padding-top: 12px
@@ -70,13 +74,88 @@ section#branding
   img.logo
     position: relative
     left: 55px
+    @media (max-width: 515px)
+      display: none
+
+  img.logo-small
+    display: none
+    @media (max-width: 515px)
+      display: inline
+    @media (max-width: 360px)
+      width: 215px!important
+
+body.home nav
+  .select-wrapper
+    margin: auto auto
+    @media (max-width: 600px)
+      display: block
+  ul
+    @media (max-width: 600px)
+      display: none
 
 nav
   text-align: center
 
+  .select-wrapper
+    max-width: 400px
+    width: 100%
+    border: 1px solid #D3DBDA
+    height: 32px
+    position: relative
+    cursor: pointer
+    display: none
+    margin-top: 16px
+
+    @media (max-width: 850px)
+      display: block
+
+    &:before
+      content: ''
+      width: 1px
+      height: 100%
+      right: 75px
+      background: #D3DBDA
+      display: block
+      position: absolute
+      top: 0
+
+    &:after
+      content: ''
+      width: 55px
+      height: 12px
+      background: url('img/menu-icon.svg') no-repeat
+      background-size: 100% auto
+      display: block
+      position: absolute
+      top: 12px
+      right: 10px
+      opacity: .6
+      z-index: -1
+
+  select
+    border: 0px
+    width: 100%
+    height: 36px
+    display: inline-block
+    font-family: 'nan'
+    padding: 6px 12px
+    font-size: 1.3rem
+    color: #828976
+    background: transparent
+    border-radius: 0px
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+
+    &:focus
+      outline: 0px
+
   ul
     margin: 0
     padding: 0
+
+    @media (max-width: 850px)
+      display: none
 
   ul li
     list-style: none
@@ -113,11 +192,10 @@ nav
         visibility: visible
 
 
-
-
-.cta-section
+section.cta-section
   @include pie-clearfix
   text-align: center    
+  padding: 0px 25px
 
   h1
     font-family: 'whitney', Helvetica, Arial, sans-serif
@@ -126,6 +204,16 @@ nav
     font-size: 3.7rem
     color: $blue
     text-transform: none
+
+    @media (max-width: 660px)
+      font-size: 3rem
+    @media (max-width: 540px)
+      font-size: 2.4rem
+    @media (max-width: 430px)
+      br
+        display: none
+    @media (max-width: 400px)
+      font-size: 2.2rem
 
   span.stars
     display: inline-block
@@ -144,6 +232,11 @@ nav
       top: -5%
       left: 4%
 
+      @media (max-width: 540px)
+        top: -2%
+        width: 105%
+        left: 0
+
   .entry-content
     margin: auto auto
     max-width: 730px
@@ -153,21 +246,49 @@ nav
     .headshot-container
       text-align: center
       float: left
-      margin-right: 45px
-      height: 260px
 
-      .headshot
+      @media (max-width: 430px)
+        width: 100%
+        float: none
+        clear: both
+
+      img.button
+        @media (max-width: 430px)
+          display: none
+
+      img.headshot
         margin-bottom: 15px
+        max-width: 144px
+        width: 144px
+        height: auto
+
+        @media (max-width: 600px)
+          width: 110px
+        @media (max-width: 430px)
+          margin-bottom: 0
 
     p
       font-family: 'a-demi'
       color: #2A3436
+      margin-left: 190px
+
+      @media (max-width: 600px)
+        margin-left: 150px
+        font-size: .9rem
+
+      @media (max-width: 430px)
+        margin-left: 0
+
+
 
   .form-container
     max-width: 430px
     width: 100%
     margin: 60px auto 0
     position: relative
+
+    @media (max-width: 600px)
+      margin: 30px 0 0
 
     &:after
       content: ''
@@ -178,7 +299,10 @@ nav
       display: block
       position: absolute
       top: 40%
-      right: -100px
+      right: -90px
+
+      @media (max-width: 645px)
+        display: none
 
   form
     width: 100%
@@ -222,6 +346,9 @@ section
       letter-spacing: .6rem
       color: $blue
 
+      @media (max-width: 550px)
+        font-size: 1.7rem
+
     h2
       font-size: 1.6rem
       font-family: 'nan'
@@ -229,12 +356,16 @@ section
       margin-top: -10px
 
 section.kindwords
-  margin: 60px 0
+  margin: 35px 0
   padding: 40px 0 30px
   text-align: center
   background: url('img/lines-bg.png') no-repeat
   background-size: 1740px auto
   background-position: bottom center
+  
+  @media (max-width: 600px)
+    padding: 20px 0 0
+    margin: 15px
 
 
   .accolades-container
@@ -253,36 +384,94 @@ section.kindwords
       padding: 0 4%
       text-align: left
 
+      @media (max-width: 1050px)
+        padding: 0 3%
+      @media (max-width: 950px)
+        text-align: center
+      @media (max-width: 886px)
+        width: 32%
+      @media (max-width: 660px)
+        width: 49%
+        &:nth-child(2)
+          display: none
+
+      @media (max-width: 450px)
+        width: 100%
+        padding: 0 12.5%
+        margin-bottom: 20px
+
+      @media (max-width: 400px)
+        padding: 0px 8%
+
+      @media (max-width: 350px)
+        padding: 0px 20px
+
+
     img
       float: left
+
+      @media (max-width: 950px)
+        float: none
+        margin-bottom: 10px
 
     p 
       margin-left: 80px
       margin-top: 0
       font-size: .9rem
+
+      @media (max-width: 1050px)
+        font-size: .8rem
+      @media (max-width: 950px)
+        margin-left: 0
+      @media (max-width: 950px) and (min-width: 800px)
+        font-size: .9rem
+      @media (max-width: 800px)
+        font-size: .8rem
     
 
 
 section.popular
-  margin: 0 0 60px
+  padding: 35px 0
+  @media (max-width: 600px)
+    padding: 15px 0
 
 .collection-container
   margin-top: 40px
   width: 100%
   @include pie-clearfix
+  padding: 0 10px
 
   .collection
-    width: 33%
-    display: inline-block
+    width: calc(33.33% - 20px)
+    float: left
     background: #FAFCFC
     padding: 20px 0 30px
     margin: 0 10px
+
+    @media (max-width: 800px)
+      &:nth-of-type(2)
+        display: none
+      width: calc(50% - 20px)
+
+    @media (max-width: 600px)
+      width: calc(100% - 20px)
+
+    img.button
+      width: 159px
+      height: auto
+
+      @media (max-width: 950px)
+        width: 125px
 
     h1
       font-size: .95rem
       font-family: 'dosis-semi'
       color: #7B8B8B
       letter-spacing: .4rem
+
+      @media (max-width: 1100px)
+        font-size: .8rem
+        letter-spacing: .2rem
 
     ul.post-listing
       padding: 0
@@ -292,11 +481,21 @@ section.popular
       li
         list-style: none
 
+        @media (max-width: 800px)
+          &:nth-child(2)
+            display: none
+
         a
           @include transition(all .1s)
           display: block
           padding: 5px 12.5%
           width: 100%
+
+          @media (max-width: 950px)
+            padding: 5px 8%
+
+          @media (max-width: 600px)
+            padding: 5px 4%
 
           &:hover
             background: #E2FFC1
@@ -313,17 +512,30 @@ section.popular
           color: $blue
           text-transform: none
 
+          @media (max-width: 950px)
+            font-size: 1.1rem
+
         p
           font-size: .85rem
           color: #3E4B55
           line-height: 1.3
+
+          @media (max-width: 950px)
+            font-size: .8rem
 
 body.home article
   max-width: 800px
   width: 100%
   margin: auto auto
   margin-top: 45px
-        
+
+  h1.entry-title a
+    @media (max-width: 660px)
+      font-size: 3rem
+    @media (max-width: 540px)
+      font-size: 2.4rem
+    @media (max-width: 400px)
+      font-size: 2rem
 
 article
   text-align: left
@@ -340,6 +552,9 @@ article
   header
     margin-bottom: 40px
 
+    @media (max-width: 600px)
+      margin-bottom: 20px
+
   h1.entry-title
     text-align: left
     margin-top: 0px
@@ -352,6 +567,14 @@ article
     font-size: 3.5rem
     color: $blue
     text-transform: none
+
+    @media (max-width: 1000px)
+      font-size: 2.9rem
+    @media (max-width: 840px)
+      font-size: 2.3rem
+    @media (max-width: 400px)
+      font-size: 2rem
+
 
     &:hover
       color: darken($green, 10%)
@@ -381,12 +604,48 @@ article
       top: 3px
       margin-left: 20px
 
+      @media (max-width: 725px)
+        margin-left: 0
+        width: 100%
+        clear: both
+
       li
         list-style: none
         display: inline-block
 
         a
           padding: 0px 12px
+
+          @media (max-width: 725px)
+            padding-left: 0
+            padding-right: 20px
+
+
+body.home ul.social-buttons
+  @media (max-width: 500px)
+    margin-left: 0
+    width: 100%
+    clear: both
+
+  li a
+    @media (max-width: 500px)
+      padding-left: 0
+      padding-right: 20px
+
+
+body.home section.entry-content
+  img.featured-image
+
+  @media (max-width: 700px)
+    max-width: 260px!important
+
+  @media (max-width: 580px)
+    float: none
+    max-width: 100%!important
+    margin: 0px 0px 30px
+
+  @media (max-width: 450px)
+    margin-bottom: 15px
 
 section.entry-content 
   img.featured-image
@@ -395,34 +654,90 @@ section.entry-content
     float: right
     margin: 0px 0 30px 30px
 
+    @media (max-width: 1050px)
+      max-width: 260px!important
+
+    @media (max-width: 775px)
+      float: none
+      max-width: 100%!important
+      margin: 0px 0px 30px
+
+    @media (max-width: 450px)
+      margin-bottom: 15px
+
   p
     padding-right: 22.5%
+
+    @media (max-width: 700px)
+      padding-right: 12.5%
+
+    @media (max-width: 450px)
+      padding-right: 0
 
   a.more-link
     display: block
     margin-top: 35px
 
+section.most-recent
+  padding: 35px 25px
+
+  @media (max-width: 600px)
+    padding: 20px
 
 body:not(.home)
 
   section#branding img.logo
-    left: -90px
+    @media (min-width: 650px)
+      left: -90px
+
+  .select-wrapper
+    @media (max-width: 650px)
+      margin: auto auto
 
   section#content, section#branding, header#header, nav#menu
     text-align: left
 
+  section#branding
+    @media (max-width: 650px)
+      text-align: center!important
+
+  header#header
+    @media (max-width: 650px)
+      text-align: center!important
+      padding: 0 25px
+
   header#header, section#content
     margin-left: 350px
 
+    @media (max-width: 900px)
+      margin-left: 250px
+    @media (max-width: 650px)
+      margin-left: 0
+
   nav#menu
-    margin: 15px 0 25px
-    position: relative
-    left: -17px
+    margin: 15px 0 35px
+    padding-right: 25px
+
+    @media (min-width: 850px)
+      margin: 15px 0 25px
+      position: relative
+      left: -17px
+
+    @media (max-width: 650px)
+      text-align: center!important
+      padding: 0
 
   section#content
-    max-width: 800px
-    width: 100%
+    max-width: 825px
+    padding-right: 25px
+    width: calc(100% - 350px)
 
+    @media (max-width: 900px)
+      width: calc(100% - 250px)
+
+    @media (max-width: 650px)
+      width: 100%
+      padding: 0 25px
 
 footer
   height: 100px
@@ -445,6 +760,12 @@ aside#sidebar
   padding-left: 25px
   margin-top: 80px
 
+  @media (max-width: 900px)
+    width: 200px
+
+  @media (max-width: 650px)
+    display: none
+
   ul
     padding: 0
 
@@ -457,12 +778,22 @@ aside#sidebar
     text-transform: uppercase
     letter-spacing: 0.2rem
 
+    @media (max-width: 900px)
+      font-size: .9rem
+
   p
     font-size: .85rem
     color: #5D6A75
 
+    @media (max-width: 900px)
+      font-size: .75rem
+
   img.sidebar-headshot
     margin-left: -7px
+
+    @media (max-width: 900px)
+      width: 90px!important
+      height: auto
 
   form
     width: 90%

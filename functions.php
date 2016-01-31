@@ -73,3 +73,23 @@ function modify_read_more_link() {
   return '<a class="more-link" href="' . get_permalink() . '"><img class="button" src="' . get_bloginfo('template_directory') . '/img/read-more.svg" alt="Keep Reading..."></a>';
 }
 
+
+function menu_select() {
+  $menu_name = 'main-menu';// specify custom menu slug
+  if (($locations = get_nav_menu_locations()) && isset($locations[$menu_name])) {
+    $menu = wp_get_nav_menu_object($locations[$menu_name]);
+    $menu_items = wp_get_nav_menu_items($menu->term_id);
+
+    $menu_list = "\t\t\t\t". '<select>' ."\n";
+    foreach ((array) $menu_items as $key => $menu_item) {
+      $title = $menu_item->title;
+      $url = $menu_item->url;
+      $menu_list .= "\t\t\t\t\t". '<option value="'. $title .'" data-href="'. $url .'">'. $title .'</option>';
+    }
+    $menu_list .= "\t\t\t\t". '</select>' ."\n";
+  } else {
+    $menu_list = 'conditional failed';
+  }
+  echo $menu_list;
+}
+
